@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flag Game P1</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <!-- home page -->
+    <home class="home">
+      <nav id="dot1">
+        <h4 class="gameTitle">LEARN FLAGS</h4>
+        <ul class="homeMenu responsive">
+          <li><button class="homeButton" id="play-button">* PLAY *</button></li>
+          <li>
+            <button class="homeButton" id="play-options">* OPTIONS *</button>
+          </li>
+          <li>
+            <button class="homeButton" id="play-library">* LIBRARY *</button>
+          </li>
+        </ul>
+      </nav>
+    </home>
+    <!-- home page -->
+    <!-- ////////////////////////////////// -->
+    <!-- play page -->
+    <div class="play hidePlay">
+      <div class="container">
+        <ul class="header">
+          <li><button class="backButton" id="back-btn">back</button></li>
+          <li><span id="score">Score: 0</span></li>
+          <li><span id="play-count">1/10</span></li>
+        </ul>
+        <div class="flag-box-play">
+          <img
+            src="allFlags/x.png"
+            alt="flag"
+            height="250"
+            width="350"
+            class="flags-display"
+          />
+        </div>
+        <div class="answer-buttons">
+          <ul class="answerContainer responsive"></ul>
+        </div>
+      </div>
+    </div>
+    <!-- play page -->
+
+    <!-- ////////////////////////////////// -->
+
+    <!-- options page -->
+    <options class="options hideOptions">
+      <!-- DIV 1 -->
+      <div class="container">
+        <div class="responsive">
+          <ul class="header">
+            <li>
+              <button class="backButton" id="back-btn-options">back</button>
+            </li>
+            <li><h2>OPTIONS</h2></li>
+          </ul>
+        </div>
+
+        <!-- DIV 2 -->
+        <div class="one">
+          <h4 class="title1 inlineLeft">SOUND</h4>
+          <button class="inlineRight optbutton" id="sound-button">ON</button>
+        </div>
+        <div class="two">
+          <h4 class="title2">NUMBER OF FLAGS</h4>
+          <ul class="header">
+            <li>
+              <button
+                id="optionTenFlags"
+                class="optbutton header pushed flagNum"
+                value="10"
+                onclick="change(this.value)"
+              >
+                10
+              </button>
+            </li>
+            <li>
+              <button
+                id="optionTwentyFiveFlags"
+                class="optbutton header flagNum"
+                value="25"
+                onclick="change(this.value)"
+              >
+                25
+              </button>
+            </li>
+            <li>
+              <button
+                id="optionFiveZeroFlags"
+                class="optbutton header flagNum"
+                value="50"
+                onclick="change(this.value)"
+              >
+                50
+              </button>
+            </li>
+            <li>
+              <button
+                id="optionOneHundredFlags"
+                class="optbutton header flagNum"
+                value="100"
+                onclick="change(this.value)"
+              >
+                100
+              </button>
+            </li>
+            <li>
+              <button
+                id="optionOneNineSixFlags"
+                class="optbutton header flagNum"
+                value="196"
+                onclick="change(this.value)"
+              >
+                196
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="three">
+          <div><h4 class="title3">CONTINENTS</h4></div>
+          <ul class="optionsOnOffBtns">
+            <li>
+              <span id="africaOptionsTitle" class="optbutton">AFRICA</span>
+              <button id="africaOptionsBtn" class="inlineRight optbutton">
+                ON
+              </button>
+            </li>
+            <li>
+              <span id="asiaOptionsTitle" class="optbutton">ASIA</span>
+              <button id="asiaOptionsBtn" class="inlineRight optbutton">
+                ON
+              </button>
+            </li>
+            <li>
+              <span id="europeOptionsTitle" class="optbutton">EUROPE</span>
+              <button id="europeOptionsBtn" class="inlineRight optbutton">
+                ON
+              </button>
+            </li>
+            <li>
+              <span id="naOptionsTitle" class="optbutton">NORTH AMERICA</span>
+              <button id="naOptionsBtn" class="inlineRight optbutton">
+                ON
+              </button>
+            </li>
+            <li>
+              <span id="saOptionsTitle" class="optbutton">SOUTH AMERICA</span>
+              <button id="saOptionsBtn" class="inlineRight optbutton">
+                ON
+              </button>
+            </li>
+            <li>
+              <span id="ocOptionsTitle" class="optbutton">OCEANIA</span>
+              <button id="ocOptionsBtn" class="inlineRight optbutton">
+                ON
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </options>
+    <audio class="right sounds">
+      <source src="sounds/correct_sound.mp3" type="audio/mpeg" />
+    </audio>
+    <audio class="wrong sounds">
+      <source src="sounds/wrong_sound.mp3" type="audio/mpeg" />
+    </audio>
+  </body>
+</html>
