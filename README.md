@@ -27,7 +27,7 @@ A simple game displaying flag from countries around the world. Game displays 1 f
 
 # Images
 
-![Imgur Image](https://i.imgur.com/dm7AJ1n.png | width=100)
-![Imgur Image](https://i.imgur.com/6XAoYMs.png | width=100)
-![Imgur Image](https://i.imgur.com/SiZNxUg.png | width=100)
-![Imgur Image](https://i.imgur.com/YSppPt0.png | width=100)
+![Imgur Image](https://i.imgur.com/dm7AJ1n.png)
+![Imgur Image](https://i.imgur.com/6XAoYMs.png)
+![Imgur Image](https://i.imgur.com/SiZNxUg.png)
+![Imgur Image](https://i.imgur.com/YSppPt0.png)
