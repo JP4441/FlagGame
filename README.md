@@ -10,7 +10,7 @@ A simple game displaying flag from countries around the world. Game displays 1 f
 - Default sounds for correct and wrong answer which can be turned off from options menu.
 - At the end of the game - i.e when 10 attempts have reached 10 flags, the game will end and will display score.
 
-# Future items to include:
+# Next Steps:
 
 - Library of flags and names of the countries they belong to
 - Feature where everytime you get a flag choice wrong the correct answer will display as well
@@ -27,7 +27,7 @@ A simple game displaying flag from countries around the world. Game displays 1 f
 
 # Images
 
-![Imgur Image](https://i.imgur.com/dm7AJ1n.png)
-![Imgur Image](https://i.imgur.com/6XAoYMs.png)
-![Imgur Image](https://i.imgur.com/SiZNxUg.png)
-![Imgur Image](https://i.imgur.com/YSppPt0.png)
+![Imgur Image](https://i.imgur.com/dm7AJ1n.png | width=100)
+![Imgur Image](https://i.imgur.com/6XAoYMs.png | width=100)
+![Imgur Image](https://i.imgur.com/SiZNxUg.png | width=100)
+![Imgur Image](https://i.imgur.com/YSppPt0.png | width=100)
