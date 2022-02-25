@@ -12,13 +12,15 @@ A simple game displaying flag from countries around the world. Game displays 1 f
 - Library of flags and names of the countries they belong to
 - Feature where everytime you get a flag choice wrong the correct answer will display as well
 - Add and remove continents from the options menu.
+- Fix end of screen bug and double option print issue
 
-# Bugs
-- At the end screen, if user pushes back after clicking last item it will do a double screen. FIX: remove back button from last screen.
-- Sometimes two identical choices are provided in the options during the game. This is because the array that spits out the choices, those countries were not taken out of the "world" "global array. When choices are selected at random, sometimes the same two countries show up in the options during the game. FIX: remove countries selected for game from main global array in order to prevent double printing.
+# Technologies Used
 
-Play the game here:
-[**HERE**](https://jp4441.github.io/FlagGame/)
+- Java Script
+- HTML
+- CSS 
+
+Play the game [**HERE**](https://jp4441.github.io/FlagGame/)
 
 # Images
 

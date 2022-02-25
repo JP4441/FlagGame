@@ -74,6 +74,7 @@ function change(value) {
 }
 
 //////COUNTRIES DATA
+
 const countryNames = [
   "Afghanistan",
   "Albania",
