@@ -551,13 +551,13 @@ function handleNext() {
   }
 }
 
-let pushedEl = document.querySelectorAll(".optbutton");
+let pushedEl = document.querySelectorAll(".flagNum");
 
 pushedEl.forEach((item) => {
-  item.addEventListener("click", clickedFunction);
+  item.addEventListener("click", clickedButtonFunction);
 });
 
-function clickedFunction(event) {
+function clickedButtonFunction(event) {
   pushedEl.forEach(function (item) {
     item.classList.remove("pushed");
   });
