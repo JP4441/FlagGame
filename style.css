@@ -15,11 +15,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-/* //////////////////////////////// */
 
-/* //////////////////////////////// */
-
-/* HOME SCREEN */
 .home {
   height: 97vh;
   width: 400px;
@@ -43,11 +39,7 @@ body {
   justify-content: center;
   text-align: center;
 }
-/* //////////////////////////////// */
 
-/* //////////////////////////////// */
-
-/* PLAY SCREEN */
 .play {
   height: 97vh;
   width: 400px;
@@ -103,15 +95,6 @@ body {
   width: 100%;
   display: inline-block;
 }
-/* //////////////////////////////// */
-
-/* //////////////////////////////// */
-
-/* OPTIONS SCREEN */
-
-/* div {
-  border: 1px solid red;
-} */
 
 .options {
   height: 97vh;
@@ -216,17 +199,6 @@ body {
   text-align: center;
 }
 
-/* .optbutton:hover {
-  background-color: rgb(231, 231, 231);
-} */
-
-/* //////////////////////////////// */
-
-/* //////////////////////////////// */
-
-/* General Stuff */
-
-/* general button look */
 .backButton {
   height: 40px;
   width: 60px;
@@ -235,14 +207,6 @@ body {
   cursor: pointer;
   border: none;
 }
-
-/* .button {
-  height: 45px;
-  width: 340px;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  font-size: 30px;
-} */
 
 .playScreenButtons {
   height: 45px;
@@ -296,8 +260,6 @@ li {
   margin-bottom: 13px;
 }
 
-/* Hidding Stuff */
-
 .hideHome {
   display: none;
 }
@@ -343,5 +305,5 @@ li {
 }
 
 .hideBackButton {
-  display:none;
+  display: none;
 }
