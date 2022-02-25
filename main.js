@@ -3,14 +3,22 @@ let scoreCount = 1;
 let scoreEl = document.getElementById("score");
 let playCountEl = document.getElementById("play-count");
 let activeGame = true;
+// let pushedEl = document.querySelectorAll(".flagNum");
 
-// //////////NAV BTW PAGES////////////
-// //////////NAV BTW PAGES////////////
-// //////////NAV BTW PAGES////////////
-// ////////// FROM HOME TO PLAY
 let hideHomeEl = document.getElementById("play-button");
 
 hideHomeEl.addEventListener("click", onStart);
+
+// pushedEl.forEach((item) => {
+//   item.addEventListener("click", clickedButtonFunction);
+// });
+
+// function clickedButtonFunction(event) {
+//   pushedEl.forEach(function (item) {
+//     item.classList.remove("pushed");
+//   });
+//   event.target.classList.add("pushed");
+// }
 
 function onStart() {
   document.querySelector(".home").classList.add("hideHome");
@@ -82,6 +90,9 @@ function hidingOptions() {
 
 let flagsDisplayEl = document.querySelector(".flags-display");
 let answerContainerEl = document.querySelector(".answerContainer");
+let selection;
+let mixedSelection;
+let globeChoices;
 
 // let option = 10; ///SUPOOSED TO BE OPTION = {WHATEVER CHOSEN ON OPTIONS 10, 25, 197}
 // option = 25;
@@ -89,13 +100,9 @@ let answerContainerEl = document.querySelector(".answerContainer");
 let option = 10;
 
 function change(value) {
-  option = value;
+  option = Number(value);
   console.log(option);
 }
-
-let selection;
-let mixedSelection;
-let globeChoices;
 
 const countryNames = [
   "Afghanistan",
@@ -500,32 +507,30 @@ function myFunction(e) {
       e.target.classList.add("buttonGreen");
       scoreNumber++;
       scoreEl.innerText = `Score: ${scoreNumber}`;
-      if (scoreCount !== option) {
-        buttonNextEl.classList.remove("hideNextButton");
-      }
+      removinghideNextButton();
+      gameOverfunction();
       console.log("YES");
       playRightSound();
       activeGame = false;
     } else {
       if (e.target.className == "playScreenButtons") {
         e.target.classList.add("buttonRed");
-        if (scoreCount !== option) {
-          buttonNextEl.classList.remove("hideNextButton");
-        }
+        removinghideNextButton();
+        gameOverfunction();
         console.log("NO");
         playWrongSound();
         activeGame = false;
       }
     }
-    if (scoreCount === option) {
-      setTimeout(function () {
-        document.querySelector(".play").classList.add("hidePlay"),
-          document.querySelector(".endGame").classList.remove("hideEndGame");
-        document.querySelector(
-          ".howManyRight"
-        ).innerText = `${scoreNumber} out of ${option}`;
-      }, 3500);
-    }
+    // if (scoreCount === option) {
+    //   setTimeout(function () {
+    //     document.querySelector(".play").classList.add("hidePlay"),
+    //       document.querySelector(".endGame").classList.remove("hideEndGame");
+    //     document.querySelector(
+    //       ".howManyRight"
+    //     ).innerText = `${scoreNumber} out of ${option}`;
+    //   }, 3500);
+    // }
   }
 }
 ////////////////////////////////////////////
@@ -551,15 +556,20 @@ function handleNext() {
   }
 }
 
-let pushedEl = document.querySelectorAll(".flagNum");
+function removinghideNextButton() {
+  if (scoreCount !== option) {
+    buttonNextEl.classList.remove("hideNextButton");
+  }
+}
 
-pushedEl.forEach((item) => {
-  item.addEventListener("click", clickedButtonFunction);
-});
-
-function clickedButtonFunction(event) {
-  pushedEl.forEach(function (item) {
-    item.classList.remove("pushed");
-  });
-  event.target.classList.add("pushed");
+function gameOverfunction() {
+  if (scoreCount === option) {
+    setTimeout(function () {
+      document.querySelector(".play").classList.add("hidePlay"),
+        document.querySelector(".endGame").classList.remove("hideEndGame");
+      document.querySelector(
+        ".howManyRight"
+      ).innerText = `${scoreNumber} out of ${option}`;
+    }, 3500);
+  }
 }
