@@ -4,21 +4,24 @@ let scoreEl = document.getElementById("score");
 let playCountEl = document.getElementById("play-count");
 let activeGame = true;
 let pushedEl = document.querySelectorAll(".flagNum");
-
 let hideHomeEl = document.getElementById("play-button");
+let hidePlayEl = document.getElementById("back-btn");
+let reloadAppEl = document.getElementById("reload");
+let homeToOptionsEl = document.getElementById("play-options");
+let hideOptionsEl = document.getElementById("back-btn-options");
+let flagsDisplayEl = document.querySelector(".flags-display");
+let answerContainerEl = document.querySelector(".answerContainer");
+let selection;
+let mixedSelection;
+let globeChoices;
+let option = 10;
+let playSound = true;
+let rightSound = document.querySelector(".right");
+let wrongSound = document.querySelector(".wrong");
+
+////GAME START ACTIONS
 
 hideHomeEl.addEventListener("click", onStart);
-
-pushedEl.forEach((item) => {
-  item.addEventListener("click", clickedButtonFunction);
-});
-
-function clickedButtonFunction(event) {
-  pushedEl.forEach(function (item) {
-    item.classList.remove("pushed");
-  });
-  event.target.classList.add("pushed");
-}
 
 function onStart() {
   document.querySelector(".home").classList.add("hideHome");
@@ -35,8 +38,8 @@ function onStart() {
   console.log(wrongChoices, "from start");
   console.log(randomChoices, "from start");
 }
-///////////////FROM PLAY TO HOME
-let hidePlayEl = document.getElementById("back-btn");
+
+////HIDDING START SCREEN
 
 hidePlayEl.addEventListener("click", hidingPlay);
 
@@ -47,26 +50,7 @@ function hidingPlay() {
   resetScores();
 }
 
-////////////////////Out of App and reload///////////////////
-
-let reloadAppEl = document.getElementById("reload");
-
-reloadAppEl.addEventListener("click", function () {
-  location.reload();
-});
-
-////////////////////RESET SCORE FUNCTION /////////////////////
-
-function resetScores() {
-  scoreNumber = 0;
-  scoreCount = 1;
-  scoreEl.innerText = `Score: ${scoreNumber}`;
-  playCountEl.innerText = `${scoreCount}/${option}`;
-}
-
-// /////FROM HOME TO OPTIONS
-
-let homeToOptionsEl = document.getElementById("play-options");
+////FROM HOME TO OPTIONS
 
 homeToOptionsEl.addEventListener("click", toOptions);
 
@@ -75,8 +59,7 @@ function toOptions() {
   document.querySelector(".options").classList.remove("hideOptions");
 }
 
-// //////FROM OPTIONS TO HOME
-let hideOptionsEl = document.getElementById("back-btn-options");
+////FROM OPTIONS TO HOME
 
 hideOptionsEl.addEventListener("click", hidingOptions);
 
@@ -84,26 +67,13 @@ function hidingOptions() {
   document.querySelector(".options").classList.add("hideOptions");
   document.querySelector(".home").classList.remove("hideHome");
 }
-//////////NAV BTW PAGES////////////
-//////////NAV BTW PAGES////////////
-//////////NAV BTW PAGES////////////
-
-let flagsDisplayEl = document.querySelector(".flags-display");
-let answerContainerEl = document.querySelector(".answerContainer");
-let selection;
-let mixedSelection;
-let globeChoices;
-
-// let option = 10; ///SUPOOSED TO BE OPTION = {WHATEVER CHOSEN ON OPTIONS 10, 25, 197}
-// option = 25;
-// option = 196;
-let option = 10;
 
 function change(value) {
   option = Number(value);
   console.log(option);
 }
 
+//////COUNTRIES DATA
 const countryNames = [
   "Afghanistan",
   "Albania",
@@ -350,12 +320,10 @@ const southAmerica = [
   6, 20, 23, 34, 36, 38, 49, 70, 134, 135, 167, 177, 187, 191,
 ];
 
-///////////////////////////////////////////////////////
-///////CONTINENT///////
+//////SELECTS NUMBER OF FLAGS FOR GAME AND PUTS IT INTO ARRAY - 10 BY DEFAULT
 
-let playing = []; // first flag = ${playing[0]}.png
+let playing = [];
 
-/////////IF ALL CONTINENTS TICKED PLAYING = WORLD
 function numberOfFlagsChosen() {
   playing = [];
   do {
@@ -368,12 +336,9 @@ function numberOfFlagsChosen() {
   } while (playing.length < option);
 }
 
-// numberOfFlagsChosen();
+//////GENERATES 3 RANDOM WRONG CHOICES
 
-///////////////////////////////////////////////////////
-///////GLOBAl///////
-
-let wrongChoices = []; // first flag = ${playing[0]}.png
+let wrongChoices = [];
 
 function makeWrongChoicesList() {
   wrongChoices = [];
@@ -387,12 +352,7 @@ function makeWrongChoicesList() {
   } while (wrongChoices.length < 3);
 }
 
-// makeWrongChoicesList();
-
-//////////////////////////////////////////////////////
-//////MIXER//////////
-let randomChoices = [];
-let mixer = [1, 2, 3, 4];
+//////BUTTON CHOICE MIXER
 
 function makeRandomChoices() {
   randomChoices = [];
@@ -408,10 +368,8 @@ function makeRandomChoices() {
   } while (randomChoices.length < 4);
 }
 
-// makeRandomChoices();
+//////CHOICES BUTTON MECHANISM
 
-///////////////////////////////////////////////////////
-////////////////////CHOICES BUTTON MECHANISM/////////////////////////////
 let buttonEl;
 
 function createAnswerButtons(incomingOption) {
@@ -424,7 +382,7 @@ function createAnswerButtons(incomingOption) {
   answerContainerEl.appendChild(newList);
 }
 
-///////MIXES THE OPTIONS IN THE OPTIONS MENU
+//////MIXES THE OPTIONS IN THE OPTIONS MENU
 
 function makeMultipleChoice() {
   for (let i = 0; i < randomChoices.length; i++) {
@@ -440,9 +398,7 @@ function makeMultipleChoice() {
   }
 }
 
-// makeMultipleChoice();
-
-////////CREATES NEXT BUTTON////////
+//////CREATES NEXT BUTTON
 
 let buttonNextEl;
 function makeNextButton() {
@@ -459,12 +415,7 @@ function makeNextButton() {
   return buttonNextEl;
 }
 
-////////////////////////////////////////////
-///////SOUNDS////////
-let playSound = true;
-
-let rightSound = document.querySelector(".right");
-let wrongSound = document.querySelector(".wrong");
+//////PLAYS SOUNDS
 
 function playRightSound() {
   if (playSound) rightSound.play();
@@ -488,18 +439,16 @@ function toggleSound() {
     playSound = true;
   }
 }
-////////////////////////////////////////////
-///////DISPLAYS FLAG////////
+
+//////DISPLAYS FLAG
+
 function displayFlagFunction() {
   flagsDisplayEl.src = `allFlags/${playing[0]}.png`;
 }
 
-// displayFlagFunction();
-
 document.addEventListener("click", optionsWinLoseButtons);
 
-////////////////////////////////////////////
-//////WHEN CHOICE BUTTONS ARE CLICKED///////
+//////WHEN CHOICE BUTTONS ARE CLICKED
 
 function optionsWinLoseButtons(e) {
   if (activeGame) {
@@ -524,8 +473,9 @@ function optionsWinLoseButtons(e) {
     }
   }
 }
-////////////////////////////////////////////
-//////WHEN NEXT BUTTON CLICKED//////
+
+//////WHEN NEXT BUTTON CLICKED
+
 let handleNextGoes = true;
 function handleNext() {
   if (handleNextGoes) {
@@ -553,6 +503,8 @@ function removinghideNextButton() {
   }
 }
 
+//////GAME OVER FUNCTION
+
 function gameOverfunction() {
   if (scoreCount === option) {
     setTimeout(function () {
@@ -561,6 +513,34 @@ function gameOverfunction() {
       document.querySelector(
         ".howManyRight"
       ).innerText = `${scoreNumber} out of ${option}`;
-    }, 3500);
+    }, 2500);
   }
+}
+
+////PLAY AGAIN RELOAD
+
+reloadAppEl.addEventListener("click", function () {
+  location.reload();
+});
+
+////RESET SCORE FUNCTION
+
+function resetScores() {
+  scoreNumber = 0;
+  scoreCount = 1;
+  scoreEl.innerText = `Score: ${scoreNumber}`;
+  playCountEl.innerText = `${scoreCount}/${option}`;
+}
+
+////HIGHLIGHTING FLAG NUMBER OPTIONS IN OPTIONS
+
+pushedEl.forEach((item) => {
+  item.addEventListener("click", clickedButtonFunction);
+});
+
+function clickedButtonFunction(event) {
+  pushedEl.forEach(function (item) {
+    item.classList.remove("pushed");
+  });
+  event.target.classList.add("pushed");
 }
