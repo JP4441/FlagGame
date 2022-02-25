@@ -550,3 +550,16 @@ function handleNext() {
     console.log(randomChoices, "Next-btn");
   }
 }
+
+let pushedEl = document.querySelectorAll(".optbutton");
+
+pushedEl.forEach((item) => {
+  item.addEventListener("click", clickedFunction);
+});
+
+function clickedFunction(event) {
+  pushedEl.forEach(function (item) {
+    item.classList.remove("pushed");
+  });
+  event.target.classList.add("pushed");
+}
