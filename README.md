@@ -21,3 +21,15 @@ A simple game displaying flag from countries around the world. Game displays 1 f
 - At the end screen, if user pushes back after clicking last item it will do a double screen. FIX: remove back button from last screen. 
 - Sometimes two identical choices are provided in the options during the game. This is because the array that spits out the choices, those countries were not taken out of the "world" "global array. When choices are selected at random, sometimes the same two countries show up in the options during the game. FIX: remove countries selected for game from main global array in order to prevent double printing. 
 
+Play the game here:
+
+[**HERE**](https://jp4441.github.io/FlagGame/)
+
+![Imgur Image](https://i.imgur.com/dm7AJ1n.png)
+![Imgur Image](https://i.imgur.com/6XAoYMs.png)
+![Imgur Image](https://i.imgur.com/SiZNxUg.png)
+![Imgur Image](https://i.imgur.com/YSppPt0.png)
+
+
+
+
