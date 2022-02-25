@@ -1,7 +1,9 @@
 # LEARN FLAGS - or not ---- V.1
+
 A simple game displaying flag from countries around the world. Game displays 1 flag and provides 4 options to choose from.
 
 # Features:
+
 - Desktop and Mobile compatible
 - 196 countries selected - no territories for V.1.
 - Options menu allowing user to pick the amount of flags user wants to play with - 10 flags is the default.
@@ -9,6 +11,7 @@ A simple game displaying flag from countries around the world. Game displays 1 f
 - At the end of the game - i.e when 10 attempts have reached 10 flags, the game will end and will display score.
 
 # Future items to include:
+
 - Library of flags and names of the countries they belong to
 - Feature where everytime you get a flag choice wrong the correct answer will display as well
 - Add and remove continents from the options menu.
@@ -18,9 +21,9 @@ A simple game displaying flag from countries around the world. Game displays 1 f
 
 - Java Script
 - HTML
-- CSS 
+- CSS
 
-Play the game [**HERE**](https://jp4441.github.io/FlagGame/)
+# Play the game [**HERE**](https://jp4441.github.io/FlagGame/)
 
 # Images
 
