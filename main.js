@@ -3,22 +3,22 @@ let scoreCount = 1;
 let scoreEl = document.getElementById("score");
 let playCountEl = document.getElementById("play-count");
 let activeGame = true;
-// let pushedEl = document.querySelectorAll(".flagNum");
+let pushedEl = document.querySelectorAll(".flagNum");
 
 let hideHomeEl = document.getElementById("play-button");
 
 hideHomeEl.addEventListener("click", onStart);
 
-// pushedEl.forEach((item) => {
-//   item.addEventListener("click", clickedButtonFunction);
-// });
+pushedEl.forEach((item) => {
+  item.addEventListener("click", clickedButtonFunction);
+});
 
-// function clickedButtonFunction(event) {
-//   pushedEl.forEach(function (item) {
-//     item.classList.remove("pushed");
-//   });
-//   event.target.classList.add("pushed");
-// }
+function clickedButtonFunction(event) {
+  pushedEl.forEach(function (item) {
+    item.classList.remove("pushed");
+  });
+  event.target.classList.add("pushed");
+}
 
 function onStart() {
   document.querySelector(".home").classList.add("hideHome");
