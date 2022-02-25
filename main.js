@@ -22,6 +22,7 @@ function onStart() {
   makeMultipleChoice();
   makeNextButton();
   displayFlagFunction();
+  activeGame = true;
   console.log(playing, "from start");
   console.log(wrongChoices, "from start");
   console.log(randomChoices, "from start");
@@ -37,6 +38,14 @@ function hidingPlay() {
   answerContainerEl.innerHTML = "";
   resetScores();
 }
+
+////////////////////Out of App and reload///////////////////
+
+let reloadAppEl = document.getElementById("reload");
+
+reloadAppEl.addEventListener("click", function () {
+  location.reload();
+});
 
 ////////////////////RESET SCORE FUNCTION /////////////////////
 
@@ -445,26 +454,33 @@ function makeNextButton() {
 
 ////////////////////////////////////////////
 ///////SOUNDS////////
+let playSound = true;
 
 let rightSound = document.querySelector(".right");
 let wrongSound = document.querySelector(".wrong");
 
 function playRightSound() {
-  rightSound.play();
+  if (playSound) rightSound.play();
 }
+
 function playWrongSound() {
-  wrongSound.play();
+  if (playSound) wrongSound.play();
 }
 
-let soundOff = document.getElementById("sound-button");
+let gameSoundsOnOff = document.querySelectorAll(".gameSounds");
+let gameSoundButtonOnOff = document.getElementById("sound-button");
 
-soundOff.addEventListener("click", soundOnOff);
+gameSoundButtonOnOff.addEventListener("click", toggleSound);
 
-function soundOnOff() {
-  if (soundOff.innerText === "ON") {
+function toggleSound() {
+  if (gameSoundButtonOnOff.innerText === "ON") {
+    gameSoundButtonOnOff.innerText = "OFF";
+    playSound = false;
+  } else {
+    gameSoundButtonOnOff.innerText = "ON";
+    playSound = true;
   }
 }
-
 ////////////////////////////////////////////
 ///////DISPLAYS FLAG////////
 function displayFlagFunction() {
@@ -484,42 +500,53 @@ function myFunction(e) {
       e.target.classList.add("buttonGreen");
       scoreNumber++;
       scoreEl.innerText = `Score: ${scoreNumber}`;
-      buttonNextEl.classList.remove("hideNextButton");
+      if (scoreCount !== option) {
+        buttonNextEl.classList.remove("hideNextButton");
+      }
       console.log("YES");
       playRightSound();
       activeGame = false;
     } else {
       if (e.target.className == "playScreenButtons") {
         e.target.classList.add("buttonRed");
-        buttonNextEl.classList.remove("hideNextButton");
+        if (scoreCount !== option) {
+          buttonNextEl.classList.remove("hideNextButton");
+        }
         console.log("NO");
         playWrongSound();
         activeGame = false;
       }
     }
+    if (scoreCount === option) {
+      setTimeout(function () {
+        document.querySelector(".play").classList.add("hidePlay"),
+          document.querySelector(".endGame").classList.remove("hideEndGame");
+        document.querySelector(
+          ".howManyRight"
+        ).innerText = `${scoreNumber} out of ${option}`;
+      }, 3500);
+    }
   }
 }
 ////////////////////////////////////////////
 //////WHEN NEXT BUTTON CLICKED//////
-
+let handleNextGoes = true;
 function handleNext() {
-  scoreCount++;
-  playCountEl.innerText = `${scoreCount}/${option}`;
-  buttonNextEl.classList.add("hideNextButton");
-  // deleteButtons();
-  playing.shift();
-  answerContainerEl.innerHTML = "";
-  makeWrongChoicesList();
-  makeRandomChoices();
-  makeMultipleChoice();
-  displayFlagFunction();
-  activeGame = true;
-  makeNextButton();
-  console.log(playing, "Next-btn");
-  console.log(wrongChoices, "Next-btn");
-  console.log(randomChoices, "Next-btn");
+  if (handleNextGoes) {
+    console.log("inside handleNext");
+    scoreCount++;
+    playCountEl.innerText = `${scoreCount}/${option}`;
+    buttonNextEl.classList.add("hideNextButton");
+    playing.shift();
+    answerContainerEl.innerHTML = "";
+    makeWrongChoicesList();
+    makeRandomChoices();
+    makeMultipleChoice();
+    displayFlagFunction();
+    activeGame = true;
+    makeNextButton();
+    console.log(playing, "Next-btn");
+    console.log(wrongChoices, "Next-btn");
+    console.log(randomChoices, "Next-btn");
+  }
 }
-
-let playsWithTen = document.getElementById("optionTenFlags");
-
-playsWithTen.addEventListener("click", playsWithTen);

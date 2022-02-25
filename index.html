@@ -10,45 +10,77 @@
   </head>
   <body>
     <!-- home page -->
-    <home class="home">
+    <div class="home">
       <nav id="dot1">
         <h4 class="gameTitle">LEARN FLAGS</h4>
+        <h4 class="gameSubTitle">or not.</h4>
         <ul class="homeMenu responsive">
-          <li><button class="homeButton" id="play-button">* PLAY *</button></li>
           <li>
-            <button class="homeButton" id="play-options">* OPTIONS *</button>
+            <button class="endGameButtons" id="play-button">* PLAY *</button>
           </li>
           <li>
-            <button class="homeButton" id="play-library">* LIBRARY *</button>
+            <button class="endGameButtons" id="play-options">
+              * OPTIONS *
+            </button>
+          </li>
+          <li>
+            <button class="endGameButtons" id="play-library">
+              * LIBRARY *
+            </button>
           </li>
         </ul>
       </nav>
-    </home>
+    </div>
     <!-- home page -->
     <!-- ////////////////////////////////// -->
     <!-- play page -->
     <div class="play hidePlay">
       <div class="container">
-        <ul class="header">
-          <li><button class="backButton" id="back-btn">back</button></li>
-          <li><span id="score">Score: 0</span></li>
-          <li><span id="play-count">1/10</span></li>
-        </ul>
-        <div class="flag-box-play">
-          <img
-            src="allFlags/x.png"
-            alt="flag"
-            height="250"
-            width="350"
-            class="flags-display"
-          />
-        </div>
-        <div class="answer-buttons">
-          <ul class="answerContainer responsive"></ul>
+        <div class="playMargin responsive">
+          <ul class="header">
+            <li><button class="backButton" id="back-btn">back</button></li>
+            <li><span id="score">Score: 0</span></li>
+            <li><span id="play-count">1/10</span></li>
+          </ul>
+          <div class="flag-box-play">
+            <img
+              src="allFlags/x.png"
+              alt="flag"
+              height="250"
+              width="350"
+              class="flags-display"
+            />
+          </div>
+          <div class="answer-buttons">
+            <ul class="answerContainer responsive"></ul>
+          </div>
         </div>
       </div>
     </div>
     <!-- play page -->
+
+    <!-- /////FINAL PAGE///// -->
+
+    <div class="home endGame hideEndGame">
+      <div id="dot1">
+        <h2 class="endGameScore">SCORE:</h2>
+        <h4 class="howManyRight">HELLO</h4>
+        <ul>
+          <li>
+            <button class="endGameButtons" id="reload">PLAY AGAIN</button>
+          </li>
+          <li>
+            <button
+              class="endGameButtons"
+              id="outOfApp"
+              onclick="window.location.href='https://www.generalassemb.ly/';"
+            >
+              STOP
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!-- ////////////////////////////////// -->
 
@@ -61,7 +93,7 @@
             <li>
               <button class="backButton" id="back-btn-options">back</button>
             </li>
-            <li><h2>OPTIONS</h2></li>
+            <li><h2 id="optionsTitle">OPTIONS</h2></li>
           </ul>
         </div>
 
@@ -168,10 +200,10 @@
         </div>
       </div>
     </options>
-    <audio class="right sounds">
+    <audio class="gameSounds right">
       <source src="sounds/correct_sound.mp3" type="audio/mpeg" />
     </audio>
-    <audio class="wrong sounds">
+    <audio class="gameSounds wrong">
       <source src="sounds/wrong_sound.mp3" type="audio/mpeg" />
     </audio>
   </body>
