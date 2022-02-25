@@ -496,12 +496,12 @@ function displayFlagFunction() {
 
 // displayFlagFunction();
 
-document.addEventListener("click", myFunction);
+document.addEventListener("click", optionsWinLoseButtons);
 
 ////////////////////////////////////////////
 //////WHEN CHOICE BUTTONS ARE CLICKED///////
 
-function myFunction(e) {
+function optionsWinLoseButtons(e) {
   if (activeGame) {
     if (e.target.innerText === countryNames[playing[0]]) {
       e.target.classList.add("buttonGreen");
@@ -522,15 +522,6 @@ function myFunction(e) {
         activeGame = false;
       }
     }
-    // if (scoreCount === option) {
-    //   setTimeout(function () {
-    //     document.querySelector(".play").classList.add("hidePlay"),
-    //       document.querySelector(".endGame").classList.remove("hideEndGame");
-    //     document.querySelector(
-    //       ".howManyRight"
-    //     ).innerText = `${scoreNumber} out of ${option}`;
-    //   }, 3500);
-    // }
   }
 }
 ////////////////////////////////////////////
