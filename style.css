@@ -15,11 +15,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-/* //////////////////////////////// */
 
-/* //////////////////////////////// */
-
-/* HOME SCREEN */
 .home {
   height: 97vh;
   width: 400px;
@@ -43,11 +39,7 @@ body {
   justify-content: center;
   text-align: center;
 }
-/* //////////////////////////////// */
 
-/* //////////////////////////////// */
-
-/* PLAY SCREEN */
 .play {
   height: 97vh;
   width: 400px;
@@ -78,8 +70,6 @@ body {
 }
 
 #back-btn,
-/* #score,
-#play-count, */
 #back-btn-options {
   margin-top: 20px;
 }
@@ -94,6 +84,7 @@ body {
   font-size: 25px;
   height: 80px;
 }
+
 .header li {
   display: inline-block;
 }
@@ -103,15 +94,6 @@ body {
   width: 100%;
   display: inline-block;
 }
-/* //////////////////////////////// */
-
-/* //////////////////////////////// */
-
-/* OPTIONS SCREEN */
-
-/* div {
-  border: 1px solid red;
-} */
 
 .options {
   height: 97vh;
@@ -120,7 +102,6 @@ body {
   font-size: 28px;
   border-radius: 1rem;
   border: 2px solid rgb(216, 216, 216);
-  /* margin: 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,9 +121,11 @@ body {
   margin-top: 18px;
   margin-bottom: 20px;
 }
+
 .one {
   height: 75px;
 }
+
 .two {
   height: 100px;
 }
@@ -150,6 +133,7 @@ body {
 .three {
   height: 350px;
 }
+
 .title1 {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -216,17 +200,6 @@ body {
   text-align: center;
 }
 
-.optbutton:hover {
-  background-color: rgb(231, 231, 231);
-}
-
-/* //////////////////////////////// */
-
-/* //////////////////////////////// */
-
-/* General Stuff */
-
-/* general button look */
 .backButton {
   height: 40px;
   width: 60px;
@@ -235,14 +208,6 @@ body {
   cursor: pointer;
   border: none;
 }
-
-/* .button {
-  height: 45px;
-  width: 340px;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  font-size: 30px;
-} */
 
 .playScreenButtons {
   height: 45px;
@@ -296,8 +261,6 @@ li {
   margin-bottom: 13px;
 }
 
-/* Hidding Stuff */
-
 .hideHome {
   display: none;
 }
@@ -340,4 +303,8 @@ li {
 .howManyRight {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.hideBackButton {
+  display: none;
 }
