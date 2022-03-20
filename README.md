@@ -27,7 +27,7 @@ Thank you for checking out my project! I designed this calm flag-trivia-game for
 - CSS
 - Adobe Illustrator
 
-# PLAY GAME HERE [**HERE**](https://jp4441.github.io/GA_Project_1_Flag_Game/)
+# You can test this game by clicking [**HERE**](https://jp4441.github.io/GA_Project_1_Flag_Game/)
 
 # Images
 
