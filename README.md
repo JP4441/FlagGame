@@ -23,11 +23,18 @@ A simple game displaying flag from countries around the world. Game displays 1 f
 - HTML
 - CSS
 
-# Play the game [**HERE**](https://jp4441.github.io/FlagGame/)
+# Play the game [**HERE**](https://jp4441.github.io/GA_Project_1_Flag_Game/)
 
 # Images
 
-![Imgur Image](https://i.imgur.com/dm7AJ1n.png)
-![Imgur Image](https://i.imgur.com/6XAoYMs.png)
-![Imgur Image](https://i.imgur.com/SiZNxUg.png)
-![Imgur Image](https://i.imgur.com/YSppPt0.png)
+|        Main Screen        |        Play Screen        |
+| :-----------------------: | :-----------------------: |
+| ![](screenshots/main.png) | ![](screenshots/play.png) |
+
+|          Correct Answer          |          Wrong Answer          |
+| :------------------------------: | :----------------------------: |
+| ![](screenshots/playCorrect.png) | ![](screenshots/playWrong.png) |
+
+|        Options Screen        |         End Game Screen         |
+| :--------------------------: | :-----------------------------: |
+| ![](screenshots/options.png) | ![](screenshots/finalScore.png) |
