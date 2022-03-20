@@ -36,6 +36,7 @@
 - HTML
 - CSS
 - Adobe Illustrator
+- Figma
 
 # You can test this game by clicking [**HERE**](https://jp4441.github.io/GA_Project_1_Flag_Game/)
 
