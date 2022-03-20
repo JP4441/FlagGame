@@ -1,5 +1,7 @@
-<br />
-<h1 align="center">LEARN FLAGS - or not -- V.1</h1>
+<div align="center">
+<h1>LEARN FLAGS - or not -- V.1</h1>
+<h5>SEI 48 Project I<h5>
+</div>
 
 A simple game displaying flag from countries around the world. Game displays 1 flag and provides 4 options to choose from.
 
