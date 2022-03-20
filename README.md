@@ -5,8 +5,11 @@
 
 Thank you for checking out my project! I designed this calm flag-trivia-game for late night scrollers attempting to familiarize themselves with flags from countries around the world. The app presents itself in a monocromatic tone attempting to be as minimalist as possible, but the flags, correct and incorrect button highlights and 'Next' buttons have color. Also the app starts with a default of 10 flags and sound option, which can be turned off in the options panel.
 
-Type of website: Static.
-Time of completion: 7 days.
+# Details:
+
+- Type of website: Static.
+- Time of completion: 7 days.
+- Started last day of week 2 during bootcamp.
 
 # Features:
 
