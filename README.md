@@ -3,7 +3,11 @@
 <h5>SEI 48 Project I<h5>
 </div>
 
-Thank you for checking out my project! <i>I designed this calm flag-trivia-game for late night scrollers attempting to familiarize themselves with flags from countries around the world. The app presents itself in a monocromatic tone attempting to be as minimalist as possible, but the flags, correct and incorrect button highlights and 'Next' buttons have color. Also the app starts with a default of 10 flags and sound option, which can be turned off in the options panel.<i>
+<a href="https://github.com/DKotzer/DTrade/">Docs</a>
+||
+<a href="https://github.com/JP4441/GA_Project_1_Flag_Game/issues">Report Bug</a>
+
+<h4><i> Thank you for checking out my project! I designed this calm flag-trivia-game for late night scrollers attempting to familiarize themselves with flags from countries around the world. The app presents itself in a monocromatic tone attempting to be as minimalist as possible, but the flags, correct and incorrect button highlights and 'Next' buttons have color. Also the app starts with a default of 10 flags and sound option, which can be turned off in the options panel.<i><h4>
 
 # Details:
 
@@ -48,3 +52,15 @@ Thank you for checking out my project! <i>I designed this calm flag-trivia-game 
 |        Options Screen        |         End Game Screen         |
 | :--------------------------: | :-----------------------------: |
 | ![](screenshots/options.png) | ![](screenshots/finalScore.png) |
+
+# Wireframes
+
+|           Wire Frames           |
+| :-----------------------------: |
+| ![](screenshots/wireframes.png) |
+
+# Flow Chart
+
+|        Flow Chart         |
+| :-----------------------: |
+| ![](screenshots/flow.png) |
